@@ -1,0 +1,20 @@
+dataset:
+  root_dir: /users/PCON0003/superneutrinos1214/SK_spallation/data_set_muon_scatt_2k
+
+output:
+ output_dir: /users/PCON0003/superneutrinos1214/SK_spallation/output/
+
+
+model: 
+  backbone: 'vgg16' # 'vgg16' # 'resnet152'
+  trained_weights_path: /users/PCON0003/superneutrinos1214/SK_spallation/output/23932107/
+
+
+test:
+  data_fraction: 1.0  # (0.0, 1.0]
+  batch_size: 20 ## Effective batch size for DDP = batch_size * world_size
+
+# optimizer: 
+#   name: sgd  # sgd, lars
+#   weight_decay: 0.0005
+#   momentum: 0.9
