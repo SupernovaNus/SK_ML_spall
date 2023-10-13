@@ -1,1 +1,25 @@
+dataset:
+  root_dir: /users/PCON0003/superneutrinos1214/SK_spallation/data_set_muon_scatt_2k
+      #/users/PCON0003/superneutrinos1214/SK_spallation/data_set_20k  #/users/PCON0003/superneutrinos1214/SK_spallation/data_set
+  channel_id: 'all'  # 'all' = all channels / 0 = Charges / 1 = Times
 
+output:
+ output_dir: /users/PCON0003/superneutrinos1214/SK_spallation/output/
+
+
+model: 
+  backbone: 'vgg16' 
+#   load_trained_weights: False  # flag to resume from our trained model
+#   trained_weights_path: C:\cache\simsiam-lensing-dev_0327074036.pt  # provide the model path 
+
+train:
+  batch_size: 100 ## Effective batch size for DDP = batch_size * world_size
+  num_epochs: 100 # this parameter influence the lr decay
+  lr: 0.005
+#   stop_at_epoch: 50 # has to be smaller than num_epochs
+#   n_epoch_ckpt: 20 # save checkpoint every n_epoch_ckpt epochs #2
+
+# optimizer: 
+#   name: sgd  # sgd, lars
+#   weight_decay: 0.0005
+#   momentum: 0.9
