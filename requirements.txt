@@ -1,0 +1,8 @@
+tqdm
+pyyaml
+matplotlib
+astropy
+numpy
+pandas
+transformers==4.18.0
+umap-learn
